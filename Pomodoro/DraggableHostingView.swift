@@ -1,3 +1,11 @@
+//
+//  DraggableHostingView.swift
+//  Pomodoro
+//
+//  Created by Ved Panse on 5/27/25.
+//
+
+
 import Cocoa
 import SwiftUI
 
