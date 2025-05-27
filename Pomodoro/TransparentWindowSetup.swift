@@ -1,3 +1,11 @@
+//
+//  TransparentWindowSetup.swift
+//  Pomodoro
+//
+//  Created by Ved Panse on 5/27/25.
+//
+
+
 import SwiftUI
 
 struct TransparentWindowSetup: View {
@@ -14,7 +22,13 @@ struct TransparentWindowConfigurator: NSViewRepresentable {
                 window.titlebarAppearsTransparent = true
                 window.isOpaque = false
                 window.backgroundColor = .clear
+                window.styleMask.remove(.titled) // ❌ remove title bar
+                window.styleMask.remove(.resizable)
+                window.styleMask.remove(.miniaturizable)
+                window.styleMask.remove(.closable)
+                                
                 window.styleMask.insert(.fullSizeContentView)
+                window.setContentSize(NSSize(width: 500, height: 600))
             }
         }
         return NSView()
